@@ -12,7 +12,7 @@ double seconds()
   return double(clock())/CLOCKS_PER_SEC;
 }
 
-//matrix inversion for float performance evaluation
+//matrix multiplication for float performance evaluation
 void matrixMul(float mat1[N][N], float mat2[N][N], float result[N][N])
 {
   for (int i = 0; i < N; i++)
@@ -57,7 +57,7 @@ int main() {
     }
     double end1 = seconds();
     double vcount1 = count1 * 60 / (end1 - start1);
-    cout << "Number of matrix inversion operations: " << vcount1 << " in " << (end1 - start1) << " seconds." << endl;
+    cout << "Number of matrix multiplication operations: " << vcount1 << " in " << (end1 - start1) << " seconds." << endl;
 
     int arr[N2];
     for (int i = 0; i < N2; i++)
